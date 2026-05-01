@@ -18,11 +18,25 @@ pnpm install
 pnpm run install:codex
 ```
 
+With npm:
+
+```bash
+npm install
+npm run install:codex
+```
+
 For Claude Code:
 
 ```bash
 pnpm install
 pnpm run install:claude-code
+```
+
+With npm:
+
+```bash
+npm install
+npm run install:claude-code
 ```
 
 For package-style setup after this repo is uploaded to GitHub:
@@ -75,6 +89,18 @@ command = "npx"
 args = ["-y", "github:<owner>/wp-docs-finder"]
 ```
 
+Installed globally with npm:
+
+```bash
+npm install -g github:<owner>/wp-docs-finder
+```
+
+```toml
+[mcp_servers.wp-docs-finder]
+command = "wp-docs-finder"
+args = []
+```
+
 Local development:
 
 ```toml
@@ -97,6 +123,13 @@ Fallback for users without pnpm:
 claude mcp add wp-docs-finder --scope local -- npx -y github:<owner>/wp-docs-finder
 ```
 
+Installed globally with npm:
+
+```bash
+npm install -g github:<owner>/wp-docs-finder
+claude mcp add wp-docs-finder --scope local -- wp-docs-finder
+```
+
 Use `--scope user` instead of `--scope local` if you want the server available across all Claude Code projects.
 
 ## Tools
@@ -111,6 +144,12 @@ Install dependencies:
 
 ```bash
 pnpm install
+```
+
+Npm also works for consumers:
+
+```bash
+npm install
 ```
 
 Run the server:

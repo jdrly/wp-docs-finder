@@ -10,6 +10,13 @@ From a cloned checkout:
 bash scripts/install-codex.sh --local
 ```
 
+With npm scripts:
+
+```bash
+npm install
+npm run install:codex
+```
+
 For package-style setup from GitHub:
 
 ```bash
@@ -24,6 +31,13 @@ From a cloned checkout:
 
 ```bash
 bash scripts/install-claude-code.sh --local
+```
+
+With npm scripts:
+
+```bash
+npm install
+npm run install:claude-code
 ```
 
 For package-style setup from GitHub:
@@ -60,6 +74,18 @@ command = "npx"
 args = ["-y", "github:<owner>/wp-docs-finder"]
 ```
 
+Or install the command globally with npm:
+
+```bash
+npm install -g github:<owner>/wp-docs-finder
+```
+
+```toml
+[mcp_servers.wp-docs-finder]
+command = "wp-docs-finder"
+args = []
+```
+
 ## Codex From Local Checkout
 
 For local development before publishing:
@@ -82,6 +108,13 @@ Fallback without pnpm:
 
 ```bash
 claude mcp add wp-docs-finder --scope local -- npx -y github:<owner>/wp-docs-finder
+```
+
+Or install globally with npm:
+
+```bash
+npm install -g github:<owner>/wp-docs-finder
+claude mcp add wp-docs-finder --scope local -- wp-docs-finder
 ```
 
 ## Refresh Docs Cache
